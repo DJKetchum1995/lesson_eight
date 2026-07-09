@@ -1,6 +1,6 @@
 <template>
   <div class="home-page">
-    <v-app-bar flat color="white" elevation="1">
+    <v-app-bar flat elevation="0">
       <v-toolbar-title>My Dashboard</v-toolbar-title>
       <v-spacer />
       <v-select
@@ -26,7 +26,7 @@
 
       <v-row dense class="summary-row">
         <v-col cols="12" md="3" v-for="card in summaryCards" :key="card.title">
-          <v-card elevation="1" class="metric-card">
+          <v-card elevation="0" class="metric-card" :class="card.className">
             <v-card-text>
               <div class="metric-title">{{ card.title }}</div>
               <div class="metric-value">{{ card.value }}</div>
@@ -72,12 +72,14 @@
 
       <v-row dense>
         <v-col cols="12">
-          <v-card elevation="1" class="chart-card full-width-chart">
-            <v-card-title class="chart-title">Conversion trend</v-card-title>
-            <v-card-text class="chart-body">
-              <ConversionsArea :metrics="metrics" :selected="selected" />
-            </v-card-text>
-          </v-card>
+          <div class="conversion-section-card">
+            <v-card elevation="0" class="chart-card full-width-chart">
+              <v-card-title class="chart-title">Conversion trend</v-card-title>
+              <v-card-text class="chart-body">
+                <ConversionsArea :metrics="metrics" :selected="selected" />
+              </v-card-text>
+            </v-card>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -159,6 +161,7 @@ const ordersChange = computed(() => changeScore(selectedMetric.value.orders, pre
 const summaryCards = computed(() => [
   {
     title: 'Revenue',
+    className: 'revenue-card',
     value: selected.value === 'all' ? formatDollar(totalRevenue.value) : formatDollar(selectedMetric.value.revenue),
     note: selected.value === 'all' ? 'Yearly revenue' : `${selectedMetric.value.label} revenue`,
     arrow: revenueChange.value >= 0 ? '▲' : '▼',
@@ -167,6 +170,7 @@ const summaryCards = computed(() => [
   },
   {
     title: 'Visitors',
+    className: 'visitors-card',
     value: selected.value === 'all' ? formatNumber(totalVisitors.value) : formatNumber(selectedMetric.value.visitors),
     note: selected.value === 'all' ? 'Yearly visitors' : `${selectedMetric.value.label} visitors`,
     arrow: visitorsChange.value >= 0 ? '▲' : '▼',
@@ -175,6 +179,7 @@ const summaryCards = computed(() => [
   },
   {
     title: 'Conversions',
+    className: 'conversions-card',
     value: selected.value === 'all' ? formatPercent(averageConversions.value) : formatPercent(selectedMetric.value.conversions),
     note: selected.value === 'all' ? 'Average conversion rate' : `${selectedMetric.value.label} conversion rate`,
     arrow: conversionsChange.value >= 0 ? '▲' : '▼',
@@ -183,6 +188,7 @@ const summaryCards = computed(() => [
   },
   {
     title: 'Orders',
+    className: 'orders-card',
     value: selected.value === 'all' ? formatNumber(totalOrders.value) : formatNumber(selectedMetric.value.orders),
     note: selected.value === 'all' ? 'Yearly orders' : `${selectedMetric.value.label} orders`,
     arrow: ordersChange.value >= 0 ? '▲' : '▼',
