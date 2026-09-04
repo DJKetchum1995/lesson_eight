@@ -12,19 +12,19 @@ import type { ChartOptions } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-interface Metric { month: string; label: string; revenue: number }
+interface Metric { month: string; label: string; shipmentVolume: number }
 const props = defineProps<{ metrics: Metric[]; selected: string }>()
 
 const chartData = computed(() => ({
   labels: props.metrics.map((metric) => metric.label),
   datasets: [
     {
-      label: 'Revenue',
-      data: props.metrics.map((metric) => metric.revenue),
+      label: 'Shipment Volume',
+      data: props.metrics.map((metric) => metric.shipmentVolume),
       backgroundColor: props.metrics.map((metric) =>
         props.selected !== 'all' && props.selected === metric.month
-          ? 'rgba(52, 211, 153, 0.95)'
-          : 'rgba(52, 211, 153, 0.55)',
+          ? 'rgba(37, 99, 235, 0.95)'
+          : 'rgba(96, 165, 250, 0.65)',
       ),
       borderRadius: 8,
     },
@@ -36,12 +36,12 @@ const chartOptions: ChartOptions<'bar'> = {
   maintainAspectRatio: false,
   plugins: {
     legend: { display: false },
-    tooltip: { callbacks: { label: (context) => `$${context.parsed.y?.toLocaleString()}` } },
+    tooltip: { callbacks: { label: (context) => `${context.parsed.y?.toLocaleString()} shipments` } },
   },
   scales: {
     y: {
       ticks: {
-        callback: (value) => `$${Number(value).toLocaleString()}`,
+        callback: (value) => Number(value).toLocaleString(),
       },
     },
   },

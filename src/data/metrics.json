@@ -1,14 +1,194 @@
 [
-  { "month": "2025-01", "label": "Jan", "revenue": 115200, "visitors": 28000, "conversions": 2.4, "orders": 672 },
-  { "month": "2025-02", "label": "Feb", "revenue": 128000, "visitors": 30000, "conversions": 2.6, "orders": 780 },
-  { "month": "2025-03", "label": "Mar", "revenue": 140500, "visitors": 32000, "conversions": 2.7, "orders": 864 },
-  { "month": "2025-04", "label": "Apr", "revenue": 159800, "visitors": 35000, "conversions": 2.9, "orders": 1015 },
-  { "month": "2025-05", "label": "May", "revenue": 201200, "visitors": 42000, "conversions": 3.1, "orders": 1302 },
-  { "month": "2025-06", "label": "Jun", "revenue": 239600, "visitors": 48000, "conversions": 3.4, "orders": 1632 },
-  { "month": "2025-07", "label": "Jul", "revenue": 319500, "visitors": 60000, "conversions": 3.8, "orders": 2280 },
-  { "month": "2025-08", "label": "Aug", "revenue": 329800, "visitors": 62000, "conversions": 3.6, "orders": 2232 },
-  { "month": "2025-09", "label": "Sep", "revenue": 259400, "visitors": 50000, "conversions": 3.3, "orders": 1650 },
-  { "month": "2025-10", "label": "Oct", "revenue": 229700, "visitors": 46000, "conversions": 3.0, "orders": 1380 },
-  { "month": "2025-11", "label": "Nov", "revenue": 279900, "visitors": 42000, "conversions": 3.5, "orders": 1470 },
-  { "month": "2025-12", "label": "Dec", "revenue": 419800, "visitors": 58000, "conversions": 4.2, "orders": 2436 }
+  {
+    "month": "2025-01",
+    "label": "Jan",
+    "shipmentVolume": 12840,
+    "onTimeDelivery": 94.1,
+    "openExceptions": 26,
+    "activeRoutes": 118,
+    "exceptionTypes": { "Delay": 11, "Equipment": 6, "Weather": 5, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 2660, "onTimeDelivery": 94.8, "openExceptions": 6, "activeRoutes": 28 },
+      "Southeast": { "shipmentVolume": 2460, "onTimeDelivery": 92.9, "openExceptions": 5, "activeRoutes": 25 },
+      "Midwest": { "shipmentVolume": 2780, "onTimeDelivery": 95.7, "openExceptions": 4, "activeRoutes": 26 },
+      "Southwest": { "shipmentVolume": 2320, "onTimeDelivery": 93.6, "openExceptions": 7, "activeRoutes": 20 },
+      "West": { "shipmentVolume": 2620, "onTimeDelivery": 94.3, "openExceptions": 4, "activeRoutes": 19 }
+    }
+  },
+  {
+    "month": "2025-02",
+    "label": "Feb",
+    "shipmentVolume": 13960,
+    "onTimeDelivery": 94.9,
+    "openExceptions": 24,
+    "activeRoutes": 121,
+    "exceptionTypes": { "Delay": 10, "Equipment": 5, "Weather": 4, "Documentation": 5 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 2850, "onTimeDelivery": 95.4, "openExceptions": 5, "activeRoutes": 29 },
+      "Southeast": { "shipmentVolume": 2680, "onTimeDelivery": 94.1, "openExceptions": 4, "activeRoutes": 25 },
+      "Midwest": { "shipmentVolume": 3010, "onTimeDelivery": 96.2, "openExceptions": 5, "activeRoutes": 27 },
+      "Southwest": { "shipmentVolume": 2420, "onTimeDelivery": 94.3, "openExceptions": 6, "activeRoutes": 21 },
+      "West": { "shipmentVolume": 3000, "onTimeDelivery": 94.7, "openExceptions": 4, "activeRoutes": 19 }
+    }
+  },
+  {
+    "month": "2025-03",
+    "label": "Mar",
+    "shipmentVolume": 14850,
+    "onTimeDelivery": 95.6,
+    "openExceptions": 22,
+    "activeRoutes": 125,
+    "exceptionTypes": { "Delay": 9, "Equipment": 5, "Weather": 3, "Documentation": 5 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 2950, "onTimeDelivery": 96.1, "openExceptions": 4, "activeRoutes": 30 },
+      "Southeast": { "shipmentVolume": 2840, "onTimeDelivery": 95.2, "openExceptions": 4, "activeRoutes": 26 },
+      "Midwest": { "shipmentVolume": 3225, "onTimeDelivery": 96.8, "openExceptions": 5, "activeRoutes": 28 },
+      "Southwest": { "shipmentVolume": 2520, "onTimeDelivery": 94.6, "openExceptions": 5, "activeRoutes": 21 },
+      "West": { "shipmentVolume": 3315, "onTimeDelivery": 95.5, "openExceptions": 4, "activeRoutes": 20 }
+    }
+  },
+  {
+    "month": "2025-04",
+    "label": "Apr",
+    "shipmentVolume": 15320,
+    "onTimeDelivery": 96.1,
+    "openExceptions": 21,
+    "activeRoutes": 127,
+    "exceptionTypes": { "Delay": 8, "Equipment": 4, "Weather": 3, "Documentation": 6 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3010, "onTimeDelivery": 96.4, "openExceptions": 4, "activeRoutes": 30 },
+      "Southeast": { "shipmentVolume": 2910, "onTimeDelivery": 95.8, "openExceptions": 4, "activeRoutes": 27 },
+      "Midwest": { "shipmentVolume": 3335, "onTimeDelivery": 96.9, "openExceptions": 5, "activeRoutes": 28 },
+      "Southwest": { "shipmentVolume": 2610, "onTimeDelivery": 95.4, "openExceptions": 5, "activeRoutes": 22 },
+      "West": { "shipmentVolume": 3455, "onTimeDelivery": 96.2, "openExceptions": 3, "activeRoutes": 20 }
+    }
+  },
+  {
+    "month": "2025-05",
+    "label": "May",
+    "shipmentVolume": 16280,
+    "onTimeDelivery": 96.8,
+    "openExceptions": 19,
+    "activeRoutes": 130,
+    "exceptionTypes": { "Delay": 8, "Equipment": 4, "Weather": 2, "Documentation": 5 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3160, "onTimeDelivery": 97.1, "openExceptions": 3, "activeRoutes": 31 },
+      "Southeast": { "shipmentVolume": 3030, "onTimeDelivery": 96.2, "openExceptions": 4, "activeRoutes": 28 },
+      "Midwest": { "shipmentVolume": 3550, "onTimeDelivery": 97.7, "openExceptions": 4, "activeRoutes": 29 },
+      "Southwest": { "shipmentVolume": 2785, "onTimeDelivery": 95.9, "openExceptions": 5, "activeRoutes": 22 },
+      "West": { "shipmentVolume": 3755, "onTimeDelivery": 96.7, "openExceptions": 3, "activeRoutes": 20 }
+    }
+  },
+  {
+    "month": "2025-06",
+    "label": "Jun",
+    "shipmentVolume": 17150,
+    "onTimeDelivery": 96.4,
+    "openExceptions": 20,
+    "activeRoutes": 132,
+    "exceptionTypes": { "Delay": 8, "Equipment": 5, "Weather": 3, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3325, "onTimeDelivery": 96.8, "openExceptions": 4, "activeRoutes": 31 },
+      "Southeast": { "shipmentVolume": 3180, "onTimeDelivery": 96.0, "openExceptions": 4, "activeRoutes": 28 },
+      "Midwest": { "shipmentVolume": 3725, "onTimeDelivery": 97.4, "openExceptions": 5, "activeRoutes": 29 },
+      "Southwest": { "shipmentVolume": 2940, "onTimeDelivery": 95.7, "openExceptions": 4, "activeRoutes": 23 },
+      "West": { "shipmentVolume": 3980, "onTimeDelivery": 96.1, "openExceptions": 3, "activeRoutes": 21 }
+    }
+  },
+  {
+    "month": "2025-07",
+    "label": "Jul",
+    "shipmentVolume": 18130,
+    "onTimeDelivery": 97.2,
+    "openExceptions": 17,
+    "activeRoutes": 136,
+    "exceptionTypes": { "Delay": 7, "Equipment": 4, "Weather": 2, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3440, "onTimeDelivery": 97.5, "openExceptions": 3, "activeRoutes": 32 },
+      "Southeast": { "shipmentVolume": 3345, "onTimeDelivery": 96.8, "openExceptions": 4, "activeRoutes": 29 },
+      "Midwest": { "shipmentVolume": 3965, "onTimeDelivery": 97.9, "openExceptions": 3, "activeRoutes": 30 },
+      "Southwest": { "shipmentVolume": 3070, "onTimeDelivery": 96.3, "openExceptions": 4, "activeRoutes": 23 },
+      "West": { "shipmentVolume": 4310, "onTimeDelivery": 97.1, "openExceptions": 3, "activeRoutes": 22 }
+    }
+  },
+  {
+    "month": "2025-08",
+    "label": "Aug",
+    "shipmentVolume": 18670,
+    "onTimeDelivery": 97.5,
+    "openExceptions": 16,
+    "activeRoutes": 139,
+    "exceptionTypes": { "Delay": 6, "Equipment": 4, "Weather": 2, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3525, "onTimeDelivery": 97.8, "openExceptions": 3, "activeRoutes": 33 },
+      "Southeast": { "shipmentVolume": 3410, "onTimeDelivery": 97.1, "openExceptions": 3, "activeRoutes": 29 },
+      "Midwest": { "shipmentVolume": 4080, "onTimeDelivery": 98.4, "openExceptions": 3, "activeRoutes": 31 },
+      "Southwest": { "shipmentVolume": 3180, "onTimeDelivery": 96.7, "openExceptions": 4, "activeRoutes": 24 },
+      "West": { "shipmentVolume": 4475, "onTimeDelivery": 97.5, "openExceptions": 3, "activeRoutes": 22 }
+    }
+  },
+  {
+    "month": "2025-09",
+    "label": "Sep",
+    "shipmentVolume": 17920,
+    "onTimeDelivery": 96.9,
+    "openExceptions": 18,
+    "activeRoutes": 136,
+    "exceptionTypes": { "Delay": 7, "Equipment": 5, "Weather": 3, "Documentation": 3 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3380, "onTimeDelivery": 97.2, "openExceptions": 4, "activeRoutes": 32 },
+      "Southeast": { "shipmentVolume": 3295, "onTimeDelivery": 96.4, "openExceptions": 4, "activeRoutes": 29 },
+      "Midwest": { "shipmentVolume": 3920, "onTimeDelivery": 97.8, "openExceptions": 4, "activeRoutes": 30 },
+      "Southwest": { "shipmentVolume": 3090, "onTimeDelivery": 96.1, "openExceptions": 3, "activeRoutes": 24 },
+      "West": { "shipmentVolume": 4235, "onTimeDelivery": 96.8, "openExceptions": 3, "activeRoutes": 21 }
+    }
+  },
+  {
+    "month": "2025-10",
+    "label": "Oct",
+    "shipmentVolume": 18440,
+    "onTimeDelivery": 97.3,
+    "openExceptions": 15,
+    "activeRoutes": 140,
+    "exceptionTypes": { "Delay": 6, "Equipment": 3, "Weather": 2, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3495, "onTimeDelivery": 97.7, "openExceptions": 3, "activeRoutes": 33 },
+      "Southeast": { "shipmentVolume": 3380, "onTimeDelivery": 97.0, "openExceptions": 3, "activeRoutes": 30 },
+      "Midwest": { "shipmentVolume": 4070, "onTimeDelivery": 98.2, "openExceptions": 3, "activeRoutes": 31 },
+      "Southwest": { "shipmentVolume": 3155, "onTimeDelivery": 96.6, "openExceptions": 3, "activeRoutes": 24 },
+      "West": { "shipmentVolume": 4340, "onTimeDelivery": 97.4, "openExceptions": 3, "activeRoutes": 22 }
+    }
+  },
+  {
+    "month": "2025-11",
+    "label": "Nov",
+    "shipmentVolume": 19120,
+    "onTimeDelivery": 97.8,
+    "openExceptions": 14,
+    "activeRoutes": 142,
+    "exceptionTypes": { "Delay": 5, "Equipment": 3, "Weather": 2, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3630, "onTimeDelivery": 98.1, "openExceptions": 3, "activeRoutes": 34 },
+      "Southeast": { "shipmentVolume": 3485, "onTimeDelivery": 97.4, "openExceptions": 3, "activeRoutes": 30 },
+      "Midwest": { "shipmentVolume": 4210, "onTimeDelivery": 98.6, "openExceptions": 3, "activeRoutes": 32 },
+      "Southwest": { "shipmentVolume": 3250, "onTimeDelivery": 97.0, "openExceptions": 2, "activeRoutes": 24 },
+      "West": { "shipmentVolume": 4545, "onTimeDelivery": 97.9, "openExceptions": 3, "activeRoutes": 22 }
+    }
+  },
+  {
+    "month": "2025-12",
+    "label": "Dec",
+    "shipmentVolume": 20380,
+    "onTimeDelivery": 98.1,
+    "openExceptions": 13,
+    "activeRoutes": 146,
+    "exceptionTypes": { "Delay": 5, "Equipment": 3, "Weather": 1, "Documentation": 4 },
+    "regionalPerformance": {
+      "Northeast": { "shipmentVolume": 3825, "onTimeDelivery": 98.4, "openExceptions": 2, "activeRoutes": 35 },
+      "Southeast": { "shipmentVolume": 3680, "onTimeDelivery": 97.8, "openExceptions": 2, "activeRoutes": 31 },
+      "Midwest": { "shipmentVolume": 4430, "onTimeDelivery": 98.8, "openExceptions": 3, "activeRoutes": 33 },
+      "Southwest": { "shipmentVolume": 3495, "onTimeDelivery": 97.5, "openExceptions": 3, "activeRoutes": 25 },
+      "West": { "shipmentVolume": 4950, "onTimeDelivery": 98.2, "openExceptions": 3, "activeRoutes": 22 }
+    }
+  }
 ]

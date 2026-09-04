@@ -12,19 +12,19 @@ import type { ChartOptions } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, LineElement, PointElement, LinearScale, CategoryScale)
 
-interface Metric { month: string; label: string; visitors: number }
+interface Metric { month: string; label: string; onTimeDelivery: number }
 const props = defineProps<{ metrics: Metric[]; selected: string }>()
 
 const chartData = computed(() => ({
   labels: props.metrics.map((metric) => metric.label),
   datasets: [
     {
-      label: 'Visitors',
-      data: props.metrics.map((metric) => metric.visitors),
-      borderColor: 'rgba(93, 58, 46, 1)',
-      backgroundColor: 'rgba(93, 58, 46, 0.06)',
+      label: 'On-Time Delivery',
+      data: props.metrics.map((metric) => metric.onTimeDelivery),
+      borderColor: 'rgba(13, 148, 136, 1)',
+      backgroundColor: 'rgba(13, 148, 136, 0.08)',
       pointBackgroundColor: props.metrics.map((metric) =>
-        props.selected !== 'all' && props.selected === metric.month ? 'rgba(93, 58, 46, 1)' : 'rgba(93, 58, 46, 1)',
+        props.selected !== 'all' && props.selected === metric.month ? 'rgba(13, 148, 136, 1)' : 'rgba(13, 148, 136, 1)',
       ),
       pointRadius: 4,
       fill: false,
@@ -40,14 +40,16 @@ const chartOptions: ChartOptions<'line'> = {
     legend: { display: false },
     tooltip: {
       callbacks: {
-        label: (context) => `${Number(context.parsed.y).toLocaleString()} visitors`,
+        label: (context) => `${Number(context.parsed.y).toFixed(1)}% on time`,
       },
     },
   },
   scales: {
     y: {
+      min: 90,
+      max: 100,
       ticks: {
-        callback: (value) => Number(value).toLocaleString(),
+        callback: (value) => `${Number(value).toFixed(1)}%`,
       },
     },
   },

@@ -85,7 +85,11 @@ p {
 }
 
 .dashboard-header {
-  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
   padding: 2px 0 0;
 }
 
@@ -106,56 +110,114 @@ p {
   line-height: 1.45;
 }
 
+.status-chip {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
 /* Top navigation and brand (from design mockup) */
-.topnav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 18px 0 12px;
-  gap:12px;
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 72px;
+  padding: 18px 0 10px;
 }
 
-.brand{ display:flex; align-items:center; gap:12px; }
-.brand-mark{ width:36px; height:36px; border-radius:10px; background: linear-gradient(135deg, var(--primary), #9b8bff); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; font-size:16px; box-shadow: 0 4px 12px rgba(109,94,248,0.35); }
-.brand-text h1{ font-size:18px; font-weight:700; letter-spacing:-0.01em; margin:0; }
-.brand-text p{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
 
-.nav-controls{ display:flex; align-items:center; gap:12px; }
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), #9b8bff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+  flex-shrink: 0;
+}
 
-.month-select{ position: relative; display:flex; align-items:center; gap:8px; background: transparent; border: none; border-radius: 6px; padding: 2px 8px; font-size: 13px; font-weight:600; color: var(--text-primary); box-shadow: none; }
-.month-select .v-field__input{ padding: 0 6px !important; font-size:13px !important; }
-.month-select svg{ width:16px; height:16px; color: var(--muted); }
-.month-select .chev{ width:12px; height:12px; margin-left:4px; }
+.brand-text {
+  min-width: 0;
+}
 
-/* Remove underline/overlay for a clean simple dropdown */
-.month-select .v-field__overlay { display: none !important; }
-.month-select .v-field { background: transparent !important; border: none !important; box-shadow: none !important; }
-.month-select .v-select__selection, .month-select .v-field__input { font-size: 13px !important; }
+.brand-text h1 {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
 
-/* Aggressively hide any leftover underline or bottom border from Vuetify */
-.month-select .v-field__control,
-.month-select .v-field__slot,
-.month-select .v-field__outline,
-.month-select .v-select__slot,
-.month-select .v-field__decorator,
-.month-select .v-field__details {
-  border: none !important;
+.brand-text p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.4;
+  max-width: 640px;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  width: 170px;
+  min-width: 170px;
+}
+
+.filter-select .v-field {
+  border-radius: 12px !important;
+  min-height: 44px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   box-shadow: none !important;
-  background: transparent !important;
-  display: none !important;
 }
 
-.month-select .v-select__selection {
-  border-bottom: none !important;
+.filter-select .v-field__input {
+  font-size: 0.86rem !important;
+  color: var(--text) !important;
 }
 
-/* fallback: remove pseudo-element underlines */
-.month-select::after,
-.month-select::before {
-  display: none !important;
+.filter-select .v-field__outline {
+  --v-field-border-width: 1px;
 }
 
-.export-btn{ display:flex; align-items:center; gap:8px; background: var(--text-primary); color: white; border: none; border-radius: 8px; padding: 8px 14px; font-size:13.5px; font-weight:600; cursor:pointer; }
+.filter-select .v-field__append-inner {
+  align-items: center;
+}
+
+.filter-select .v-select__selection {
+  font-weight: 600;
+}
+
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 10px;
+  border: none;
+  background: var(--text-h);
+  color: white;
+  padding: 0 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 
 /* Summary cards matching mockup */
 .cards{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; margin-bottom:28px; }
@@ -199,9 +261,16 @@ p {
   .dashboard-shell{ padding: 0 16px 32px; }
   .cards{ grid-template-columns: 1fr; }
   .pair-row{ grid-template-columns: 1fr; }
-  .topnav{ flex-direction:column; align-items:flex-start; }
-  .nav-controls{ width:100%; justify-content:space-between; }
+  .topnav{ flex-direction:column; align-items:flex-start; padding-top: 14px; }
+  .nav-controls{ width:100%; justify-content:stretch; }
+  .filter-select{ width:100%; min-width: 0; flex: 1 1 100%; }
+  .dashboard-header{ flex-direction:column; align-items:flex-start; }
+  .status-chip{ margin-left: 0; }
   .card-value{ font-size:24px; }
+}
+
+@media (min-width: 720px) and (max-width: 959px){
+  .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .summary-row {
